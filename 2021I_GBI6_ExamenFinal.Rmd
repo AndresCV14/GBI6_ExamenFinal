@@ -116,7 +116,12 @@ View(df_long)
 library(sjPlot)
 library(sjmisc)
 library(dplyr)
-desc_table<-df_long %>% group_by(dataset,gen) %>% descr(show = "all")
+desc_table <- df_long %>% group_by(gen) %>% mutate(row = row_number()) %>%
+  tidyr::pivot_wider(names_from = gen, values_from = expresion_level) %>%
+  select(-row)
+
+descr(desc_table, show = "all") %>% tab_df(title = "Descriptive table",
+                             file = "./results/mRNA_expr_summary.doc") 
 ```
 
 ### [0.5 PUNTOS] 1.6 Interprete los resultados de la tabla resultante de la sección 1.5. 
