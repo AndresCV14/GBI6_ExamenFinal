@@ -344,7 +344,12 @@ ggsave("./results/regresion11.pdf", width = 5, height = 7, dpi = 300)
 ### [1 PUNTO] 2.7. Interprete los resultados de las figuras ```boxplot3.png``` y ```regresion11.pdf```.
 
 ```{tex}
-# boxplot3: Se nota que la gráfica de Lusc
+# boxplot3: Se nota que la gráfica de LUSC tiene su media en un valor negativo lo mostraria una baja expresión,
+# sin embargo, el Q3 de la caja nos muestra un valor un poco más alto que 0, pero este no es significativo, ya que,
+# Q1 es un valor negativo, mostrando así la tendencia de LUSC hacia valores negativos, dando así una baja expresión.
+
+# regresion11: Los puntos estan demasiado dispersos y no siguen la linea de tendencia, por lo que se concluye, que 
+# no hay una relación entre las variables. 
 
 ```
 
