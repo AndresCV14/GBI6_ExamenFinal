@@ -333,7 +333,10 @@ reg_gen_expression <- function (gen) {
 
 ### [0.5 PUNTOS] 2.6. Guarde en el subdirectorio ```result``` el onceavo plot de la lista ```reg_genplots``` con el nombre ```regresion11.pdf```. La definición de a figura debe ser de 300dpi. 
 ```{r reg11}
-# Escriba el código para guardar el onceavo plot. 
+grafs_cancer <- reg_gen_expression("GATA3")
+grafs_cancer[[5]][[2]]
+ggsave("./results/regresion11.pdf", width = 5, height = 7, dpi = 300)
+ 
 
 ```
 
@@ -341,7 +344,7 @@ reg_gen_expression <- function (gen) {
 ### [1 PUNTO] 2.7. Interprete los resultados de las figuras ```boxplot3.png``` y ```regresion11.pdf```.
 
 ```{tex}
-# Esciba aquí su intepretación
+# boxplot3: Se nota que la gráfica de Lusc
 
 ```
 
