@@ -182,7 +182,39 @@ ggsave("./results/boxplot3.png", width = 5, height = 7, dpi = 300)
 ### [1 PUNTO] 2.4 Escriba la función ```reg_gen_expression```, con el parámetro ```gen```. En este caso la función visualizará una gráfica de nube de puntos (geom_point) y una regresión por tipo de "dataset". La gráfica será de comparación de gen1 con gen2; por ejemplo en el eje "x" ```GATA3``` y en el eje "y"" ```FN1```.  
 
 ```{r reg_gen_exp}
-# Escriba aquí su función reg_gen_expression
+dataset_type <- list(
+  BRCA <- filter(df_long, dataset == "BRCA"),
+  OV <- filter(df_long, dataset == "OV"),
+  LUSC <- filter(df_long, dataset == "LUSC"),
+  KIPAN <- filter(df_long, dataset == "KIPAN"),
+  KIRP <- filter(df_long, dataset == "KIRP"),
+  UCEC <- filter(df_long, dataset == "UCEC")
+  )
+  
+plots_cancer <- list (  
+  BRCA1 <- BRCA %>% group_by(gen) %>% mutate(row = row_number()) %>%
+    tidyr::pivot_wider(names_from = gen, values_from = expresion_level) %>%
+    select(-row),
+  OV1 <- OV %>% group_by(gen) %>% mutate(row = row_number()) %>%
+    tidyr::pivot_wider(names_from = gen, values_from = expresion_level) %>%
+    select(-row),
+  LUSC1 <- LUSC %>% group_by(gen) %>% mutate(row = row_number()) %>%
+    tidyr::pivot_wider(names_from = gen, values_from = expresion_level) %>%
+    select(-row),
+  KIPAN1 <- KIPAN %>% group_by(gen) %>% mutate(row = row_number()) %>%
+    tidyr::pivot_wider(names_from = gen, values_from = expresion_level) %>%
+    select(-row),
+  KIRP1 <- KIRP %>% group_by(gen) %>% mutate(row = row_number()) %>%
+    tidyr::pivot_wider(names_from = gen, values_from = expresion_level) %>%
+    select(-row),
+  UCEC1 <- UCEC %>% group_by(gen) %>% mutate(row = row_number()) %>%
+    tidyr::pivot_wider(names_from = gen, values_from = expresion_level) %>%
+    select(-row),
+  GAPH1 <- UCEC %>% group_by(gen) %>% mutate(row = row_number()) %>%
+    tidyr::pivot_wider(names_from = gen, values_from = expresion_level) %>%
+    select(-row)
+)
+
 
 
 ```
