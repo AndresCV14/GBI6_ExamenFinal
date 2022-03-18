@@ -14,7 +14,6 @@ output:
       smooth_scroll: yes
 ---
 
-![](./img/ikiam.png)
 
 **Bienvenidos al examen final de GBI6 - Bioinformática.**
 
@@ -126,16 +125,11 @@ descr(desc_table, show = "all") %>% tab_df(title = "Descriptive table",
 
 ### [0.5 PUNTOS] 1.6 Interprete los resultados de la tabla resultante de la sección 1.5. 
 
-
-```{tex}
-# Si se tiene en cuenta la media de cada tipo de cáncer nos
-#podemos dar cuenta que los tipos de cáncer GATA3, FN1 y GADPH, son
-#los menos se expresan en los pacientes en comparación de los
-#demás tipos de cáncer, de igual manera, la desviación estandar nos da a entender que los datos
-#de los tipos de cáncer menos frecuentes son más propensos a variar
-
-```
-
+Si se tiene en cuenta la media de cada tipo de cáncer nos
+podemos dar cuenta que los tipos de cáncer GATA3, FN1 y GADPH, son
+los menos se expresan en los pacientes en comparación de los
+demás tipos de cáncer, de igual manera, la desviación estandar nos da a entender que los datos
+de los tipos de cáncer menos frecuentes son más propensos a variar
 
 
 ## **Pregunta 2 VISUALIZACION DE DATOS  [5 PUNTOS]**
@@ -343,15 +337,13 @@ ggsave("./results/regresion11.pdf", width = 5, height = 7, dpi = 300)
 
 ### [1 PUNTO] 2.7. Interprete los resultados de las figuras ```boxplot3.png``` y ```regresion11.pdf```.
 
-```{tex}
-# boxplot3: Se nota que la gráfica de LUSC tiene su media en un valor negativo lo mostraria una baja expresión,
-# sin embargo, el Q3 de la caja nos muestra un valor un poco más alto que 0, pero este no es significativo, ya que,
-# Q1 es un valor negativo, mostrando así la tendencia de LUSC hacia valores negativos, dando así una baja expresión.
 
-# regresion11: Los puntos estan demasiado dispersos y no siguen la linea de tendencia, por lo que se concluye, que 
-# no hay una relación entre las variables. 
+boxplot3: Se nota que la gráfica de LUSC tiene su media en un valor negativo lo mostraria una baja expresión,
+sin embargo, el Q3 de la caja nos muestra un valor un poco más alto que 0, pero este no es significativo, ya que,
+Q1 es un valor negativo, mostrando así la tendencia de LUSC hacia valores negativos, dando así una baja expresión.
 
-```
+regresion11: Los puntos estan demasiado dispersos y no siguen la linea de tendencia, por lo que se concluye, que 
+no hay una relación entre las variables. 
 
 ## 3. CONTROL DE LA VERSIÓN [1 PUNTO]. Se verficará en ell repositorio de GitHub. 
 
