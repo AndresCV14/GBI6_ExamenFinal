@@ -128,7 +128,7 @@ descr(desc_table, show = "all") %>% tab_df(title = "Descriptive table",
 
 
 ```{tex}
-# Escriba aquí su interpretación 
+# Si se tiene en cuenta la media de cada tipo de cáncer nos podemos dar cuenta que los tipos de cáncer GATA3, FN1 y GADPH, son los menos se expresan en los pacientes en comparación de los demás tipos de cáncer, de igual manera, la desviación estandar nos da a entender que los datos de los tipos de cáncer menos frecuentes son más propensos a variar
 
 ```
 
